@@ -1,0 +1,39 @@
+{
+  "name": "vibe-knowledge-maker",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "env": "node scripts/env.mjs",
+    "studio": "node scripts/glyphs.mjs && remotion studio src/index.ts",
+    "cues": "node scripts/cues.mjs",
+    "stills": "node scripts/stills.mjs",
+    "qa": "node scripts/qa.mjs",
+    "audio": "node scripts/cues.mjs && python3 scripts/score.py && python3 scripts/master.py",
+    "render": "node scripts/render.mjs out/film.mp4",
+    "gallery": "node scripts/gallery.mjs",
+    "covers": "node scripts/covers.mjs",
+    "check": "python3 scripts/check_film.py out/film.mp4"
+  },
+  "dependencies": {
+    "@fontsource/cormorant-garamond": "5.3.0",
+    "@fontsource/jetbrains-mono": "5.3.0",
+    "@fontsource/noto-sans-sc": "5.3.1",
+    "@fontsource/noto-serif-sc": "5.3.1",
+    "@remotion/bundler": "4.0.538",
+    "@remotion/cli": "4.0.538",
+    "@remotion/renderer": "4.0.538",
+    "d3-geo": "3.1.1",
+    "lxgw-wenkai-screen-webfont": "1.7.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "remotion": "4.0.538",
+    "topojson-client": "3.1.0",
+    "world-atlas": "2.0.2"
+  },
+  "devDependencies": {
+    "@types/d3-geo": "3.1.0",
+    "@types/react": "18.3.12",
+    "@types/topojson-client": "3.1.5",
+    "typescript": "5.6.3"
+  }
+}
